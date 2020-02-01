@@ -73,7 +73,7 @@ public class Controller {
             UserProfileResponse profile = getProfile(userId);
             replyText(event.getReplyToken(), "Hello "+profile.getDisplayName());
         } else {
-            replyText(event.getReplyToken(), "Hello, what\'s Ur Name?");
+            replyText(event.getReplyToken(), "Hello, what's Ur Name?");
         }
     }
 
@@ -154,8 +154,9 @@ public class Controller {
             FlexContainer flexContainer = objectMapper.readValue(flexTemplate, FlexContainer.class);
 
             ReplyMessage replyMessage = new ReplyMessage(replyToken, new FlexMessage("Menu Utama", flexContainer));
+            reply(replyMessage);
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 }
