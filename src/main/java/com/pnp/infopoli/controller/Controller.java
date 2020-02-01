@@ -3,7 +3,6 @@ package com.pnp.infopoli.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.linecorp.bot.client.LineMessagingClient;
 import com.linecorp.bot.client.LineSignatureValidator;
-import com.linecorp.bot.model.ReplyMessage;
 import com.linecorp.bot.model.event.*;
 import com.linecorp.bot.model.event.message.MessageContent;
 import com.linecorp.bot.model.event.message.StickerMessageContent;

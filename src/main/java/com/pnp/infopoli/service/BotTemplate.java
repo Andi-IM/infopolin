@@ -8,6 +8,7 @@ import com.linecorp.bot.model.event.source.UserSource;
 import com.linecorp.bot.model.message.TemplateMessage;
 import com.linecorp.bot.model.message.template.ButtonsTemplate;
 import com.linecorp.bot.model.profile.UserProfileResponse;
+import org.apache.commons.text.StringEscapeUtils;
 import org.springframework.stereotype.Service;
 
 import java.util.Collections;
@@ -40,5 +41,9 @@ public class BotTemplate {
         }
 
         return createButton(message, action, action);
+    }
+
+    public String escape(String text) {
+        return StringEscapeUtils.escapeJson(text.trim());
     }
 }
