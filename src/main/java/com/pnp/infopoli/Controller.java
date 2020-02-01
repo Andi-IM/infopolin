@@ -40,6 +40,7 @@ public class Controller {
             eventsModel.getEvents().forEach((event) -> {
                 //isi kode disini
             });
+            return new ResponseEntity<>(HttpStatus.OK);
         }catch (IOException e){
             e.printStackTrace();
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
