@@ -1,4 +1,4 @@
-package com.pnp.infopoli;
+package com.pnp.infopoli.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude;

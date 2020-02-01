@@ -1,4 +1,4 @@
-package com.pnp.infopoli;
+package com.pnp.infopoli.base;
 
 import com.linecorp.bot.client.LineMessagingClient;
 import com.linecorp.bot.client.LineMessagingClientBuilder;
