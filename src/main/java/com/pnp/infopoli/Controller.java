@@ -28,9 +28,9 @@ public class Controller {
             @RequestBody String eventsPayload
     ){
         try {
-            if (!lineSignatureValidator.validateSignature(eventsPayload.getBytes(), xLineSignature)){
-                throw new RuntimeException("Invalid Signature Validation");
-            }
+            //if (!lineSignatureValidator.validateSignature(eventsPayload.getBytes(), xLineSignature)){
+            //    throw new RuntimeException("Invalid Signature Validation");
+            //}
 
             //parsing events
             ObjectMapper objectMapper = ModelObjectMapper.createNewObjectMapper();
