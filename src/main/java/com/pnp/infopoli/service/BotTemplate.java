@@ -25,9 +25,7 @@ public class BotTemplate {
         return new TemplateMessage(actionTitle, buttonsTemplate);
     }
     public TemplateMessage greetingMessage(Source source, UserProfileResponse sender) {
-        String message = "Politeknik P.A.S.T.I \n Selamat Datang di Akun Info Politeknik Negeri \n" +
-                         "Disini kita akan sharing tentang dunia vokasi dan info seputar politeknik \n" +
-                         "untuk memulai silahkan ketik 'menu' ";
+        String message = "Politeknik P.A.S.T.I \n Selamat Datang di Akun Info Politeknik Negeri \n Disini kita akan sharing tentang dunia vokasi dan info seputar politeknik \n untuk memulai silahkan ketik 'menu' ";
         String action  = "Menu";
 
         if (source instanceof GroupSource) {
