@@ -35,7 +35,7 @@
         "action": {
           "type": "postback",
           "label": "Intropoli",
-          "data": "Intropoli",
+          "data": "Apa itu politeknik",
           "displayText": "Apa itu politeknik?"
         }
       }
