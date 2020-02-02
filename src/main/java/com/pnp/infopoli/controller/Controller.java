@@ -152,12 +152,12 @@ public class Controller {
             } else {
                 botService.leaveGroup(groupId);
             }
-        } else if (msgText.contains("info")) {
+        } else if (msgText.contains("info")
+                || msgText.contains("apa itu")
+        ) {
             processText(replyToken, textMessage);
         } else if (msgText.contains("menu")) {
             showMenu(replyToken);
-        } else if (msgText.contains("apa itu politeknik")) {
-            showApaItuPoli(replyToken);
         } else {
             handleFallbackMessage(replyToken, new GroupSource(groupId, sender.getUserId()));
         }
@@ -171,12 +171,12 @@ public class Controller {
             } else {
                 botService.leaveRoom(roomId);
             }
-        } else if (msgText.contains("info")) {
+        } else if (msgText.contains("info")
+                || msgText.contains("apa itu")
+        ) {
             processText(replyToken, textMessage);
         } else if (msgText.contains("menu")) {
             showMenu(replyToken);
-        } else if (msgText.contains("apa itu politeknik")) {
-            showApaItuPoli(replyToken);
         } else {
             handleFallbackMessage(replyToken, new RoomSource(roomId, sender.getUserId()));
         }
@@ -184,12 +184,12 @@ public class Controller {
 
     private void handleOneOnOneChats(String replyToken, String textMessage) {
         String msgText = textMessage.toLowerCase();
-        if (msgText.contains("info")){
+        if (msgText.contains("info")
+                || msgText.contains("apa itu")
+        ){
             processText(replyToken, msgText);
         } else if (msgText.contains("menu")){
             showMenu(replyToken);
-        } else if (msgText.contains("apa itu politeknik")) {
-            showApaItuPoli(replyToken);
         }
         else {
             handleFallbackMessage(replyToken, new UserSource(sender.getUserId()));
@@ -202,7 +202,13 @@ public class Controller {
 
         if (intent.equalsIgnoreCase("info")) {
             handleInfo(replyToken);
+        } else if (intent.equalsIgnoreCase("apa itu politeknik")) {
+            handleApaitu(replyToken);
         }
+    }
+
+    private void handleApaitu(String replyToken) {
+        botContainer.replyApaItuPoli(replyToken);
     }
 
     private void handleInfo(String replyToken) {
@@ -215,9 +221,5 @@ public class Controller {
 
     private void showMenu(String replyToken) {
         botContainer.replyMenu(replyToken);
-    }
-
-    private void showApaItuPoli(String replyToken) {
-        botContainer.replyApaItuPoli(replyToken);
     }
 }
