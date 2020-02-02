@@ -42,8 +42,4 @@ public class BotTemplate {
 
         return createButton(message, action, action);
     }
-
-    public String escape(String text) {
-        return StringEscapeUtils.escapeJson(text.trim());
-    }
 }

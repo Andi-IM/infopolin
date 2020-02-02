@@ -3,6 +3,7 @@ package com.pnp.infopoli.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.linecorp.bot.client.LineMessagingClient;
 import com.linecorp.bot.client.LineSignatureValidator;
+import com.linecorp.bot.model.ReplyMessage;
 import com.linecorp.bot.model.event.*;
 import com.linecorp.bot.model.event.message.MessageContent;
 import com.linecorp.bot.model.event.message.StickerMessageContent;
@@ -173,38 +174,6 @@ public class Controller {
         }
     }
 
-    private void processText(String replyToken, String messageText) {
-        String[] words = messageText.trim().split("\\s+");
-        String intent  = words[0];
-
-        if (intent.equalsIgnoreCase("info")) {
-            handleInfo(replyToken, messageText);
-        }
-    }
-
-    private void handleInfo(String replyToken, String userText) {
-
-    }
-
-    private void handleFallbackMessage(String replyToken, Source source) {
-        greetingMessage(replyToken, source, "Hi "+sender.getDisplayName()+", aku belum mengerti maksud kamu. Silahkan ikuti petunjuk ya :)");
-    }
-
-    private void showMenu(String replyToken) {
-        try {
-            ClassLoader classLoader = getClass().getClassLoader();
-            String flexTemplate     = IOUtils.toString(classLoader.getResourceAsStream("menu.json"));
-
-            ObjectMapper objectMapper   = ModelObjectMapper.createNewObjectMapper();
-            FlexContainer flexContainer = objectMapper.readValue(flexTemplate, FlexContainer.class);
-
-            botService.reply(replyToken, new FlexMessage(null, flexContainer));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-
     private void handleOneOnOneChats(String replyToken, String textMessage) {
         String msgText = textMessage.toLowerCase();
         if (msgText.contains("info")){
@@ -214,5 +183,26 @@ public class Controller {
         } else {
             handleFallbackMessage(replyToken, new UserSource(sender.getUserId()));
         }
+    }
+
+    private void processText(String replyToken, String messageText) {
+        String[] words = messageText.trim().split("\\s+");
+        String intent  = words[0];
+
+        if (intent.equalsIgnoreCase("info")) {
+            handleInfo(replyToken);
+        }
+    }
+
+    private void handleInfo(String replyToken) {
+        botService.replyText(replyToken, "IniText");
+    }
+
+    private void handleFallbackMessage(String replyToken, Source source) {
+        greetingMessage(replyToken, source, "Hi "+sender.getDisplayName()+", aku belum mengerti maksud kamu. Silahkan ikuti petunjuk ya :)");
+    }
+
+    private void showMenu(String replyToken) {
+        botService.replyFlexMessage(replyToken);
     }
 }
