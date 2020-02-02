@@ -26,7 +26,7 @@
         "style": "link",
         "action": {
           "type": "message",
-          "label": "Intro",
+          "label": "Pengenalan Bot",
           "text": "Intro"
         }
       },
@@ -35,7 +35,7 @@
         "style": "link",
         "action": {
           "type": "message",
-          "label": "Intropoli",
+          "label": "Pengenalan Politeknik",
           "text": "Apa itu politeknik?"
         }
       }
