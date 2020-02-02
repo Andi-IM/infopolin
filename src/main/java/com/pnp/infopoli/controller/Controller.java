@@ -153,6 +153,8 @@ public class Controller {
             showMenu(replyToken);
         } else if (msgText.contains("apa itu politeknik?")) {
             handleApaitu(replyToken);
+        }else if (msgText.contains("Untuk apa politeknik?")) {
+            handleApaitu(replyToken);
         } else {
             handleFallbackMessage(replyToken, new GroupSource(groupId, sender.getUserId()));
         }
@@ -172,6 +174,8 @@ public class Controller {
             showMenu(replyToken);
         } else if (msgText.contains("apa itu politeknik?")) {
             handleApaitu(replyToken);
+        }else if (msgText.contains("Untuk apa politeknik?")) {
+            handleApaitu(replyToken);
         } else {
             handleFallbackMessage(replyToken, new RoomSource(roomId, sender.getUserId()));
         }
@@ -184,6 +188,8 @@ public class Controller {
         } else if (msgText.contains("menu")){
             showMenu(replyToken);
         } else if (msgText.contains("apa itu politeknik?")) {
+            handleApaitu(replyToken);
+        }else if (msgText.contains("Untuk apa politeknik?")) {
             handleApaitu(replyToken);
         } else {
             handleFallbackMessage(replyToken, new UserSource(sender.getUserId()));
@@ -213,5 +219,9 @@ public class Controller {
 
     private void showMenu(String replyToken) {
         botContainer.replyMenu(replyToken);
+    }
+
+    private void showTujuan(String replyToken) {
+        botContainer.replyTujuan(replyToken);
     }
 }

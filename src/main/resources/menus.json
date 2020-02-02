@@ -38,6 +38,15 @@
           "label": "Pengenalan Politeknik",
           "text": "Apa itu politeknik?"
         }
+      },
+      {
+        "type": "button",
+        "style": "link",
+        "action": {
+          "type": "message",
+          "label": "Tujuan dan Jenjang Pendidikan",
+          "text": "Untuk apa politeknik?"
+        }
       }
     ]
   }

@@ -70,4 +70,19 @@ public class BotFlexContainer {
             throw new RuntimeException(e);
         }
     }
+
+    public void replyTujuan(String replyToken) {
+        try {
+            ClassLoader classLoader = getClass().getClassLoader();
+            String flexTemplate = IOUtils.toString(classLoader.getResourceAsStream("tujuanpoli.json"));
+
+            ObjectMapper objectMapper = ModelObjectMapper.createNewObjectMapper();
+            FlexContainer flexContainer = objectMapper.readValue(flexTemplate, FlexContainer.class);
+
+            ReplyMessage replyMessage = new ReplyMessage(replyToken, new FlexMessage("Introduksi Bot", flexContainer));
+            reply(replyMessage);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
