@@ -23,20 +23,20 @@
       },
       {
         "type": "button",
+        "style": "link",
         "action": {
-          "type": "postback",
+          "type": "message",
           "label": "Intro",
-          "data": "Intro",
-          "displayText": "Intro"
+          "text": "Intro"
         }
       },
       {
         "type": "button",
+        "style": "link",
         "action": {
-          "type": "postback",
+          "type": "message",
           "label": "Intropoli",
-          "data": "Apa itu politeknik",
-          "displayText": "Apa itu politeknik?"
+          "text": "Apa itu politeknik?"
         }
       }
     ]
