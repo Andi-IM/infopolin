@@ -82,21 +82,6 @@ public class BotService {
         reply(replyMessage);
     }
 
-    public void replyFlexMessage(String replyToken){
-        try {
-            ClassLoader classLoader = getClass().getClassLoader();
-            String flexTemplate = IOUtils.toString(classLoader.getResourceAsStream("menus.json"));
-
-            ObjectMapper objectMapper = ModelObjectMapper.createNewObjectMapper();
-            FlexContainer flexContainer = objectMapper.readValue(flexTemplate, FlexContainer.class);
-
-            ReplyMessage replyMessage = new ReplyMessage(replyToken, new FlexMessage("dicoding", flexContainer));
-            reply(replyMessage);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
     public UserProfileResponse getProfile(String userId) {
         try {
             return lineMessagingClient.getProfile(userId).get();

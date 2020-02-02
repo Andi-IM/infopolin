@@ -1,0 +1,60 @@
+{
+  "type": "bubble",
+  "hero": {
+    "type": "image",
+    "url": "https://4.bp.blogspot.com/-eByaPI44bR4/XjZAYjbw0jI/AAAAAAAATaM/jA-fTPLaDEUe22LfLjEr6OktlJUS6FnLACLcBGAsYHQ/s1600/poltek3.png",
+    "size": "full",
+    "aspectRatio": "16:9",
+    "aspectMode": "fit",
+    "action": {
+      "type": "postback",
+      "label": "action",
+      "data": "hello"
+    },
+    "backgroundColor": "#003399",
+    "margin": "xs",
+    "gravity": "center"
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "Apa itu Politeknik?",
+        "weight": "bold",
+        "size": "xl"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Menurut Undang-Undang No. 2 Tahun 1989 tentang  Sistem Pendidikan Nasional menjelaskan, \nliteknik merupakan perguruan tinggi yang menyelenggarakan pendidikan terapan dalam sejumlah bidang pengetahuan khusus.",
+            "size": "md",
+            "wrap": true
+          },
+          {
+            "type": "text",
+            "size": "md",
+            "wrap": true,
+            "text": " Politeknik dapat merupakan institusi pendidikan tinggi dan teknik lanjutan serta penelitian ilmiah ternama dunia atau pendidikan vokasi profesional, yang memiliki spesialiasi dalam bidang ilmu pengetahuan, teknik, dan teknologi atau jurusan-jurusan teknis yang berbeda jenis. Istilah tersebut juga dapat merujuk pada sekolah pendidikan menengah yang berfokus pada pelatihan vokasional."
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "spacing": "sm",
+    "contents": [
+      {
+        "type": "spacer",
+        "size": "sm"
+      }
+    ],
+    "flex": 0
+  }
+}

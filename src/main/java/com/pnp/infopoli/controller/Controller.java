@@ -20,6 +20,7 @@ import com.linecorp.bot.model.message.flex.container.FlexContainer;
 import com.linecorp.bot.model.objectmapper.ModelObjectMapper;
 import com.linecorp.bot.model.profile.UserProfileResponse;
 import com.pnp.infopoli.model.EventsModel;
+import com.pnp.infopoli.service.BotFlexContainer;
 import com.pnp.infopoli.service.BotService;
 import com.pnp.infopoli.service.BotTemplate;
 import org.apache.commons.io.IOUtils;
@@ -49,6 +50,9 @@ public class Controller {
 
     @Autowired
     private BotTemplate botTemplate;
+
+    @Autowired
+    private BotFlexContainer botContainer;
 
     private UserProfileResponse sender = null;
 
@@ -152,6 +156,8 @@ public class Controller {
             processText(replyToken, textMessage);
         } else if (msgText.contains("menu")) {
             showMenu(replyToken);
+        } else if (msgText.contains("apa itu poli?")) {
+            showApaItuPoli(replyToken);
         } else {
             handleFallbackMessage(replyToken, new GroupSource(groupId, sender.getUserId()));
         }
@@ -169,6 +175,8 @@ public class Controller {
             processText(replyToken, textMessage);
         } else if (msgText.contains("menu")) {
             showMenu(replyToken);
+        } else if (msgText.contains("apa itu poli?")) {
+            showApaItuPoli(replyToken);
         } else {
             handleFallbackMessage(replyToken, new RoomSource(roomId, sender.getUserId()));
         }
@@ -180,7 +188,10 @@ public class Controller {
             processText(replyToken, msgText);
         } else if (msgText.contains("menu")){
             showMenu(replyToken);
-        } else {
+        } else if (msgText.contains("apa itu poli?")) {
+            showApaItuPoli(replyToken);
+        }
+        else {
             handleFallbackMessage(replyToken, new UserSource(sender.getUserId()));
         }
     }
@@ -203,6 +214,10 @@ public class Controller {
     }
 
     private void showMenu(String replyToken) {
-        botService.replyFlexMessage(replyToken);
+        botContainer.replyMenu(replyToken);
+    }
+
+    private void showApaItuPoli(String replyToken) {
+        botContainer.replyApaItuPoli(replyToken);
     }
 }
