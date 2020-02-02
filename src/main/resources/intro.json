@@ -1,0 +1,49 @@
+{
+  "type": "bubble",
+  "hero": {
+    "type": "image",
+    "url": "https://2.bp.blogspot.com/-UKRpleFa_2A/XjZ3Wq90E8I/AAAAAAAATac/nX34ZZf8YKA904n9XB-6ygtqbvJpZ-jFgCLcBGAsYHQ/s1600/index%2B%25282%2529.png",
+    "size": "full",
+    "aspectRatio": "20:13",
+    "aspectMode": "cover",
+    "action": {
+      "type": "uri",
+      "uri": "http://linecorp.com/"
+    }
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "InfoPolin",
+        "weight": "bold",
+        "size": "xl"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Selamat datang di InfoPolin. \n\nInfoPolin adalah singatan dari Informasi Politeknik Negeri yang mana akun ini adalah jembatan bagi kalian yang ingin kuliah ke Politeknik Negeri di Indonesia. \nKami akan memperkenalkan seluk-beluk sekolah tinggi vokasional.",
+            "wrap": true
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "spacing": "sm",
+    "contents": [
+      {
+        "type": "spacer",
+        "size": "sm"
+      }
+    ],
+    "flex": 0
+  }
+}

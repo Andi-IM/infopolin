@@ -152,7 +152,7 @@ public class Controller {
             } else {
                 botService.leaveGroup(groupId);
             }
-        } else if (msgText.contains("info")) {
+        } else if (msgText.contains("intro")) {
             processText(replyToken, textMessage);
         } else if (msgText.contains("menu")) {
             showMenu(replyToken);
@@ -171,7 +171,7 @@ public class Controller {
             } else {
                 botService.leaveRoom(roomId);
             }
-        } else if (msgText.contains("info")) {
+        } else if (msgText.contains("intro")) {
             processText(replyToken, textMessage);
         } else if (msgText.contains("menu")) {
             showMenu(replyToken);
@@ -184,7 +184,7 @@ public class Controller {
 
     private void handleOneOnOneChats(String replyToken, String textMessage) {
         String msgText = textMessage.toLowerCase();
-        if (msgText.contains("info")){
+        if (msgText.contains("intro")){
             processText(replyToken, msgText);
         } else if (msgText.contains("menu")){
             showMenu(replyToken);
@@ -199,8 +199,8 @@ public class Controller {
         String[] words = messageText.trim().split("\\s+");
         String intent  = words[0];
 
-        if (intent.equalsIgnoreCase("info")) {
-            handleInfo(replyToken);
+        if (intent.equalsIgnoreCase("intro")) {
+            handleIntro(replyToken);
         }
     }
 
@@ -208,8 +208,8 @@ public class Controller {
         botContainer.replyApaItuPoli(replyToken);
     }
 
-    private void handleInfo(String replyToken) {
-        botService.replyText(replyToken, "IniText");
+    private void handleIntro(String replyToken) {
+        botContainer.replyIntro(replyToken);
     }
 
     private void handleFallbackMessage(String replyToken, Source source) {
