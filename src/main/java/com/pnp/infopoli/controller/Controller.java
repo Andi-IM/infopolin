@@ -153,7 +153,7 @@ public class Controller {
                 botService.leaveGroup(groupId);
             }
         } else if (msgText.contains("info")
-                || msgText.contains("apa itu")
+                || msgText.contains("apa itu politeknik?")
         ) {
             processText(replyToken, textMessage);
         } else if (msgText.contains("menu")) {
@@ -172,7 +172,7 @@ public class Controller {
                 botService.leaveRoom(roomId);
             }
         } else if (msgText.contains("info")
-                || msgText.contains("apa itu")
+                || msgText.contains("apa itu politeknik?")
         ) {
             processText(replyToken, textMessage);
         } else if (msgText.contains("menu")) {
@@ -185,7 +185,7 @@ public class Controller {
     private void handleOneOnOneChats(String replyToken, String textMessage) {
         String msgText = textMessage.toLowerCase();
         if (msgText.contains("info")
-                || msgText.contains("apa itu")
+                || msgText.contains("apa itu politeknik?")
         ){
             processText(replyToken, msgText);
         } else if (msgText.contains("menu")){
@@ -202,7 +202,7 @@ public class Controller {
 
         if (intent.equalsIgnoreCase("info")) {
             handleInfo(replyToken);
-        } else if (intent.equalsIgnoreCase("apa itu politeknik")) {
+        } else if (intent.equalsIgnoreCase("apa itu politeknik?")) {
             handleApaitu(replyToken);
         }
     }
