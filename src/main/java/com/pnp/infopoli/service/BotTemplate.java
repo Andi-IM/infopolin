@@ -37,6 +37,6 @@ public class BotTemplate {
             message = "Unknown Message Source!";
         }
 
-        return createButton(message, "Selamat Datang", action);
+        return createButton(message, action, action);
     }
 }
