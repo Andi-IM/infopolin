@@ -155,6 +155,8 @@ public class Controller {
             handleApaitu(replyToken);
         }else if (msgText.contains("Untuk apa politeknik?")) {
             showTujuan(replyToken);
+        } else if (msgText.contains("cara mendaftar politeknik")) {
+            JalurMasuk(replyToken);
         } else {
             handleFallbackMessage(replyToken, new GroupSource(groupId, sender.getUserId()));
         }
@@ -174,8 +176,10 @@ public class Controller {
             showMenu(replyToken);
         } else if (msgText.contains("apa itu politeknik?")) {
             handleApaitu(replyToken);
-        }else if (msgText.contains("Untuk apa politeknik?")) {
+        } else if (msgText.contains("Untuk apa politeknik?")) {
             showTujuan(replyToken);
+        } else if (msgText.contains("cara mendaftar politeknik")) {
+            JalurMasuk(replyToken);
         } else {
             handleFallbackMessage(replyToken, new RoomSource(roomId, sender.getUserId()));
         }
@@ -189,8 +193,10 @@ public class Controller {
             showMenu(replyToken);
         } else if (msgText.contains("apa itu politeknik?")) {
             handleApaitu(replyToken);
-        }else if (msgText.contains("Untuk apa politeknik?")) {
+        }else if (msgText.contains("untuk apa politeknik?")) {
             showTujuan(replyToken);
+        }else if (msgText.contains("cara mendaftar politeknik")) {
+            JalurMasuk(replyToken);
         } else {
             handleFallbackMessage(replyToken, new UserSource(sender.getUserId()));
         }
@@ -223,5 +229,9 @@ public class Controller {
 
     private void showTujuan(String replyToken) {
         botContainer.replyTujuan(replyToken);
+    }
+
+    private void JalurMasuk(String replyToken) {
+        botContainer.replyJalurMasuk(replyToken);
     }
 }

@@ -79,7 +79,22 @@ public class BotFlexContainer {
             ObjectMapper objectMapper = ModelObjectMapper.createNewObjectMapper();
             FlexContainer flexContainer = objectMapper.readValue(flexTemplate, FlexContainer.class);
 
-            ReplyMessage replyMessage = new ReplyMessage(replyToken, new FlexMessage("Introduksi Bot", flexContainer));
+            ReplyMessage replyMessage = new ReplyMessage(replyToken, new FlexMessage("Tujuan Politeknik dan Jenjang Pendidikan", flexContainer));
+            reply(replyMessage);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void replyJalurMasuk(String replyToken) {
+        try {
+            ClassLoader classLoader = getClass().getClassLoader();
+            String flexTemplate = IOUtils.toString(classLoader.getResourceAsStream("jalurmasukpoli.json"));
+
+            ObjectMapper objectMapper = ModelObjectMapper.createNewObjectMapper();
+            FlexContainer flexContainer = objectMapper.readValue(flexTemplate, FlexContainer.class);
+
+            ReplyMessage replyMessage = new ReplyMessage(replyToken, new FlexMessage("Jalur Masuk Politeknik", flexContainer));
             reply(replyMessage);
         } catch (IOException e) {
             throw new RuntimeException(e);

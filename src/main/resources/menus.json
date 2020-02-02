@@ -2,7 +2,7 @@
   "type": "bubble",
   "hero": {
     "type": "image",
-    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
+    "url": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fsipil.pnj.ac.id%2Fupload%2Fartikel%2Fimages%2FIMG_6897.JPG&f=1&nofb=1",
     "size": "full",
     "aspectRatio": "20:13",
     "aspectMode": "cover",
@@ -19,7 +19,9 @@
         "type": "text",
         "text": "Menu",
         "weight": "bold",
-        "size": "xl"
+        "size": "xl",
+        "align": "start",
+        "margin": "xs"
       },
       {
         "type": "button",
@@ -47,7 +49,17 @@
           "label": "Tujuan dan Jenjang Pendidikan",
           "text": "Untuk apa politeknik?"
         }
+      },
+      {
+        "type": "button",
+        "style": "link",
+        "action": {
+          "type": "message",
+          "label": "Jalur Masuk Politeknik",
+          "text": "Cara Mendaftar Politeknik"
+        }
       }
-    ]
+    ],
+    "margin": "xs"
   }
 }

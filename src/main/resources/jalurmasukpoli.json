@@ -1,0 +1,195 @@
+{
+  "type": "carousel",
+  "contents": [
+    {
+      "type": "bubble",
+      "size": "kilo",
+      "hero": {
+        "type": "image",
+        "url": "https://snmpn.politeknik.or.id/img/logo_snmpn.png",
+        "size": "xl",
+        "aspectMode": "fit",
+        "aspectRatio": "4:6"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "SNMPN",
+            "weight": "bold",
+            "size": "sm",
+            "wrap": true,
+            "action": {
+              "type": "uri",
+              "label": "SNMPN",
+              "uri": "http://snmpn.politeknik.or.id"
+            }
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "box",
+                "layout": "baseline",
+                "spacing": "sm",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "SNMPN atau Seleksi Nasional Masuk Polieknik Negeri merupakan seleksi jalur undangan yang diperuntukkan bagi calon peserta/siswa sekolah yang akan melanjutkan pendidikan di perguruan tinggi bidang vokasi atau politeknik negeri di seluruh wilayah indonesia",
+                    "wrap": true,
+                    "color": "#8c8c8c",
+                    "size": "xs",
+                    "flex": 5
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "spacing": "sm",
+        "paddingAll": "13px"
+      }
+    },
+    {
+      "type": "bubble",
+      "size": "kilo",
+      "hero": {
+        "type": "image",
+        "url": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F2.bp.blogspot.com%2F-0RqCwlJC9vM%2FVnDFoxjH-EI%2FAAAAAAAAAPs%2FDvOHPiJ36Zo%2Fs1600%2FLogo-UMPN-2015.jpg&f=1&nofb=1",
+        "size": "full",
+        "aspectMode": "cover",
+        "aspectRatio": "19.5:10",
+        "gravity": "top",
+        "margin": "none",
+        "position": "relative"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "UMPN",
+            "weight": "bold",
+            "size": "sm",
+            "wrap": true
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "box",
+                "layout": "baseline",
+                "spacing": "sm",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "UMPN atau Ujian Masuk Politeknik negeri merupakan seleksi jalur tes tertulis dimana para peserta mendaftar ke Politeknik terdekat di wilayah domisili mereka. \n\nUntuk sekali mengikuti ujian dikenakan biaya sebesar Rp. 600.000,00. \n\nTes dikelompokkan berdasar kan 2: Rekayasa dan Tata Niaga. Untuk pendaftaran dilakukan pada situs web masing-masing politeknik.",
+                    "wrap": true,
+                    "color": "#8c8c8c",
+                    "size": "xs",
+                    "flex": 5
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "spacing": "sm",
+        "paddingAll": "13px"
+      }
+    },
+    {
+      "type": "bubble",
+      "size": "kilo",
+      "hero": {
+        "type": "image",
+        "url": "https://1.bp.blogspot.com/-bmnbXa1xeFM/XjbuwWGWp0I/AAAAAAAATas/3SCb8MB3flwYlgNDNvAia6Wtj_N-NcBRACLcBGAsYHQ/s1600/UjianMdr.png",
+        "size": "full",
+        "aspectMode": "cover",
+        "aspectRatio": "16:9",
+        "margin": "xs",
+        "gravity": "top"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Ujian Mandiri",
+            "weight": "bold",
+            "size": "sm"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "box",
+                "layout": "baseline",
+                "spacing": "sm",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "Ujian Mandiri atau disingkat UM adalah seleksi kolektif yang diadakan masing-masing politeknik negeri. ",
+                    "wrap": true,
+                    "color": "#8c8c8c",
+                    "size": "xs",
+                    "flex": 5
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "spacing": "sm",
+        "paddingAll": "13px"
+      }
+    },
+    {
+      "type": "bubble",
+      "size": "kilo",
+      "hero": {
+        "type": "image",
+        "url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.Tbt2i1E6nOPkOdRXEueZeAHaD5%26pid%3DApi&f=1",
+        "size": "full",
+        "aspectMode": "fit",
+        "gravity": "top",
+        "position": "relative",
+        "margin": "none",
+        "aspectRatio": "16:9"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Program Kelas Kerjasama",
+            "weight": "bold",
+            "size": "sm"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "Program Kelas Kerjasama merupakan hubungan antara perusahaan dengan politeknik terpilih dimana para lulusan dari politeknik tersebut akan langsung dihadapkan dengan pekerjaan di perusahaan kerjasama. Contohnya seperti program kelas kerjasama PLN (persero).",
+                "flex": 5,
+                "size": "xs",
+                "color": "#8c8c8c",
+                "wrap": true
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
