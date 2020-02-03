@@ -49,15 +49,6 @@
           "label": "Tujuan dan Jenjang Pendidikan",
           "text": "Untuk apa politeknik?"
         }
-      },
-      {
-        "type": "button",
-        "style": "link",
-        "action": {
-          "type": "message",
-          "label": "Jalur Masuk Politeknik",
-          "text": "Cara Mendaftar Politeknik"
-        }
       }
     ],
     "margin": "xs"

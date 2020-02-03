@@ -3,14 +3,23 @@ package com.pnp.infopoli.service;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.linecorp.bot.client.LineMessagingClient;
 import com.linecorp.bot.model.ReplyMessage;
+import com.linecorp.bot.model.action.MessageAction;
 import com.linecorp.bot.model.message.FlexMessage;
+import com.linecorp.bot.model.message.Message;
+import com.linecorp.bot.model.message.TemplateMessage;
 import com.linecorp.bot.model.message.flex.container.FlexContainer;
+import com.linecorp.bot.model.message.template.CarouselColumn;
+import com.linecorp.bot.model.message.template.CarouselTemplate;
 import com.linecorp.bot.model.objectmapper.ModelObjectMapper;
+import com.linecorp.bot.model.response.BotApiResponse;
+import com.sun.tools.javac.util.List;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.concurrent.ExecutionException;
 
 @Service
@@ -87,17 +96,6 @@ public class BotFlexContainer {
     }
 
     public void replyJalurMasuk(String replyToken) {
-        try {
-            ClassLoader classLoader = getClass().getClassLoader();
-            String flexTemplate = IOUtils.toString(classLoader.getResourceAsStream("jalurmasukpoli.json"));
-
-            ObjectMapper objectMapper = ModelObjectMapper.createNewObjectMapper();
-            FlexContainer flexContainer = objectMapper.readValue(flexTemplate, FlexContainer.class);
-
-            ReplyMessage replyMessage = new ReplyMessage(replyToken, new FlexMessage("Jalur Masuk Politeknik", flexContainer));
-            reply(replyMessage);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        // Belum tahu cara carousel view
     }
 }
