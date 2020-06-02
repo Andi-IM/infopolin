@@ -5,6 +5,7 @@ import com.linecorp.bot.client.LineMessagingClient;
 import com.linecorp.bot.model.ReplyMessage;
 import com.linecorp.bot.model.message.FlexMessage;
 import com.linecorp.bot.model.message.flex.container.FlexContainer;
+import com.linecorp.bot.model.message.template.CarouselTemplate;
 import com.linecorp.bot.model.objectmapper.ModelObjectMapper;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -88,5 +89,6 @@ public class BotFlexContainer {
 
     public void replyJalurMasuk(String replyToken) {
         // Belum tahu cara carousel view
+        CarouselTemplate.builder().build().equals(" ");
     }
 }
